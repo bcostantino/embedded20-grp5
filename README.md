@@ -1,4 +1,6 @@
-# Embedded Systems -- ECE 09342 -- Fall 2020, Section 4, Group 5
+# Embedded Systems
+### ECE 09342
+### Fall 2020, Section 4, Group 5
 embedded20-grp5
 
 Foobar is a Python library for dealing with word pluralization.
