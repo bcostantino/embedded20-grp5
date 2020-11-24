@@ -1,5 +1,6 @@
 # Embedded Systems Fall 2020
-Dr. John Schmalzel<br>
+### Dr. John Schmalzel
+<br>
 ECE 09342<br>
 Section 4<br>
 Group 5<br>
