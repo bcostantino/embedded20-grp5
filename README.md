@@ -1,5 +1,5 @@
 # Embedded Systems
-## ECE 09342
+### ECE 09342
 ### Fall 2020
 ### Section 4
 ### Group 5
