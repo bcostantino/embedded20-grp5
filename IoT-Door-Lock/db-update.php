@@ -48,10 +48,10 @@ function doInsQuery($connection, $sel_func, $PIN=Null, $timestamp=Null, $client_
 
 
 // Define database properties
-$server = "fdb29.awardspace.net";
-$user = "3672926_iotlockdb";
-$password = "eh]xa-HM7uqEinB5";
-$dbname = "3672926_iotlockdb";
+$server = "";
+$user = "";
+$password = "";
+$dbname = "";
 
 // Create db connection
 $conn = new mysqli($server, $user, $password, $dbname);
@@ -64,11 +64,11 @@ if ($conn->connect_error) {
 }
 
 // Insert to database
-// sample admin password: 330928
+// fill in password to authorize usage
 if(isset($_POST['func0'])) {
-	doInsQuery($conn, 0, $PIN=330928, $client_ip=get_client_ip());
+	doInsQuery($conn, 0, $PIN=, $client_ip=get_client_ip());
 } elseif(isset($_POST['func1'])) {
-	doInsQuery($conn, 1, $PIN=330928, $client_ip=get_client_ip());
+	doInsQuery($conn, 1, $PIN=, $client_ip=get_client_ip());
 }
 $conn->close();
 ?>
