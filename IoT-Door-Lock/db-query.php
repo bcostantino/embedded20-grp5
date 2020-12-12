@@ -1,9 +1,9 @@
 <?php
 	// takes db info
-	$server = "fdb29.awardspace.net";
-	$user = "3672926_iotlockdb";
-	$password = "eh]xa-HM7uqEinB5";
-	$dbname = "3672926_iotlockdb";
+	$server = "";
+	$user = "";
+	$password = "";
+	$dbname = "";
 	
 	//endpoint = http://www.rowanembdoorlock.tk/db-query.php?door_id={door_id}&PIN={PIN}
 	
