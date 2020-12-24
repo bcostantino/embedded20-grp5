@@ -1,3 +1,10 @@
+<?php
+	if(isset($_GET["PIN"])) {
+		$password = $_GET["PIN"];
+	} else {
+		header("Location: ./index.html");
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,11 +16,6 @@
 	<link rel = "stylesheet"
     type = "text/css"
 	href = "./myStyle.css" />
-	<?php
-	$password = $_SESSION["PIN"];
-	
-	
-	?>
 	<style>
 	.ctrl-panel-controls-container {
 		margin: auto;
@@ -73,7 +75,7 @@
 		<?php
 		echo "<h1 class='ctrl-panel-controls-header'>
 				Control Panel (".$password.")
-				</h1>"
+				</h1>";
 		?>
 		<br>
 		<div class="ctrl-usage-container">
@@ -90,7 +92,7 @@
 			To interact with your door from the website, simply click one of the buttons below. The server will log your command in the database along with other info (i.e. PIN code, function, timestamp, etc). This data is avalable to the user using HTTP requests as described above.
 			</p>
 		</div>
-		<form action="db-update.php" method="post" id="ctrl-form">
+		<form action="./db-update.php" method="post" id="ctrl-form">
 				<div class="button-spread">
 				<input type="submit" name="func0" id="func0" class="unlk" value="Unlock">
 				</div>

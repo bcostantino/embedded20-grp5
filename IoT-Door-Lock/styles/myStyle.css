@@ -17,7 +17,7 @@ h1 {
 }
 button {
 	border: none;
-	color: black:
+	color: black;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-align: center;
 	transition-duration: 0.5s;
@@ -27,19 +27,19 @@ button {
 .nav-bar {
 	position: relative;
 	background-color: var(--site-green);
-	max-width: 95%;
-	height: 6em;
-	left: 2.5%;
+	max-width: 96%;
+	height: 4em;
+	left: 2%;
 }
 .page-title {
 	color: white;
 	margin: auto;
+	font-size: 2em;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-shadow: 0px 3px 3px black;
 	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 2.5em;
 }
 .info-container {
 	margin: auto;

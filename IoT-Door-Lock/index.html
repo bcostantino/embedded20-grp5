@@ -5,7 +5,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 	<link rel = "stylesheet"
     type = "text/css"
-	href = "./myStyle.css" />
+	href = "./styles/myStyle.css" />
 	<?php
 	if(isset($_GET["id"])) {
 		$ID = $_GET["id"];
@@ -15,15 +15,20 @@
 	.PIN-in {
 		display: block;
 		margin: 0 auto;
+		margin-bottom: 10px;
 		text-align: center;
 		border: 2px solid var(--site-green);
 		border-radius: 3px;
 		background-color: black;
-		max-width: 100px;
+		max-width: 150px;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-size: 2em;
 		color: var(--site-green);
 		font-weight: bold;
+		transition-duration: 0.5s;
+	}
+	.PIN-in:hover {
+		background-color: #313131;
 	}
 	.PIN-submit {
 		display: block;
@@ -51,6 +56,34 @@
 		font-family: 'Roboto Condensed', sans-serif;
 		font-size: 1.5em;
 		color: var(--site-red);
+	}
+	.register-link {
+		display: block;
+		margin: 0 auto;
+		border: 1px solid white;
+		background-color: black;
+		border-radius: 3px;
+		color: white;
+		max-width: 250px;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 1em;
+		padding: 7px;
+		transition-duration: 0.5s;
+	}
+	.register-link:hover {
+		background-color: white;
+		color: black;
+	}
+	.PIN-label {
+		display: block;
+		margin: 0 auto;
+		padding: 5px;
+		margin-bottom: 5px;
+		text-align: center;
+		color: var(--site-blue);
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 1.5em;
+		font-weight: bold;
 	}
 	</style>
 	</head>
@@ -84,26 +117,32 @@
 		<div class="control-panel">
 			<div class="crtl-info">
 				<h1 class="ctrl-panel-header">
-				<a class ="temp-link" href="control-panel.html">Control Panel</a>
+				Control Panel
 				</h1>
 				<p class="ctrl-info-txt">
 				The microcontroller will connect to the website via http methods (i.e. GET, POST, etc.) through our request API. To access the control panel, pleas enter your access PIN below.
 				</p>
 			</div>
 			<div class="login-form-container">
-				<form action="./login.php" method="post" id="auth-form">
+				<form action="./server-scripts/login.php" method="post" id="auth-form">
+					<label for="auth-pin-in" class="PIN-label">Enter 6 digit PIN</label>
 					<input class="PIN-in" type="text" maxlength=6 name="auth-pin-in" id="auth-pin-in">
 					<br>
 					<input class="PIN-submit" type="submit" id="auth-submit">
+					<?php
+					if(isset($_GET["id"])) {
+						if($_GET["id"] == 401) {
+							echo "<h3 class='invalid-pin'>Invalid PIN</h3>";
+						}
+					}
+					?>
 				</form>
-				<br>
-				<?php
-				if($ID == 401) {
-					$message = "<h3 class='invalid-pin'>Invalid PIN</h3>";
-					echo $message;
-				}
-				?>
 			</div>
+			<br>
+			<div class="register-here">
+				<input type="button" class="register-link" onclick="location.href='./register-door.html';" value="Register Your Door Here" />
+			</div>
+			<br>
 			<div class="version-num">
 				<p>
 				IoT Cloud Door Lock v1.0.0

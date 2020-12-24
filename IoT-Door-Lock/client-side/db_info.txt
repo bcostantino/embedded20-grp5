@@ -1,5 +1,0 @@
-/* Database Information */
-Server: fdb29.awardspace.net
-User: 3672926_iotlockdb
-Name: 3672926_iotlockdb
-Password: eh]xa-HM7uqEinB5

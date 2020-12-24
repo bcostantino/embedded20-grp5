@@ -1,0 +1,63 @@
+<DOCTYPE html>
+<html>
+	<head>
+	
+		<style>
+		body {
+			background-color: black;
+		}
+		.register-container {
+			margin: auto;
+			position: relative;
+			top: 30px;
+			max-width: 600px;
+			background-color: white;
+			padding: 15px;
+		}
+		
+		label {
+			font-family: 'Roboto Condensed', sans-serif;
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			margin-top: 10px;
+		}
+		
+		input[type="text"] {
+			font-family: 'Roboto Condensed', sans-serif;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 10px;
+			width: 35%;
+			border-radius: 3px;
+			background-color: black;
+			color: white;
+			font-size: 1.5em;
+		}
+		input[type="submit"] {
+			font-family: 'Roboto Condensed', sans-serif;
+			display: block;
+			margin: 0 auto;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="register-container">
+			<form action="./server-scripts/reg-door.php" method="post" id="register-door">
+				<label for="user_name">Username</label>
+				<input id="user_name" name="user_name" type="text" required> 
+				
+				<label for="door_name">Door Name</label>
+				<input id="door_name" name="door_name" type="text" required>
+				
+				<label for="door_id">Door ID</label>
+				<input id="door_id" name="door_id" type="text" required>
+				
+				<label for="PIN">PIN</label>
+				<input id="PIN" name="PIN" type="text" maxlength=6 required>
+				
+				<input type="submit">
+			</form>
+		</div>
+	</body>
+</html>
