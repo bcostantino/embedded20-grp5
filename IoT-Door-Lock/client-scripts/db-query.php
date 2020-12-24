@@ -1,4 +1,16 @@
+<<<<<<< HEAD:IoT-Door-Lock/client-scripts/db-query.php
 <?php	
+=======
+<?php
+	// takes db info
+	$server = "";
+	$user = "";
+	$password = "";
+	$dbname = "";
+	
+	//endpoint = http://www.rowanembdoorlock.tk/db-query.php?door_id={door_id}&PIN={PIN}
+	
+>>>>>>> 279656421463f56abb893d868980ff4cc63d4961:IoT-Door-Lock/db-query.php
 	// takes most recent request, id and PASSWORD (PIN)
 	// response_type = 'all' or 'most_recent'
 	
